@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         OPENING
+    ========================== -->
+
+    <section id="opening" class="screen active">
+
+        <div class="opening-content">
+
+            <p class="small-title">
+                A LITTLE SURPRISE FOR YOU
+            </p>
+
+            <h1>
+                Hey...
+            </h1>
+
+            <p class="opening-text">
+                Aku ada sesuatu nak tunjuk dekat kau.
+                <br>
+                I have something surprise for you but touche the button first 👀
+            </p>
+
+            <button class="main-btn" onclick="startBirthday()">
+                Buka Surprise ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BIRTHDAY
+    ========================== -->
+
+    <section id="birthday" class="screen">
+
+        <div class="birthday-content">
+
+            <div class="cake">
+                🎂
+            </div>
+
+            <p class="small-title">
+                TODAY IS YOUR SPECIAL DAY
+            </p>
+
+            <h1 class="birthday-title">
+                HAPPY<br>
+                BIRTHDAY!
+            </h1>
+
+            <h2 class="name">
+                [ Amirol asyraaf ]
+            </h2>
+
+            <p id="typingText" class="typing"></p>
+
+            <button class="main-btn" onclick="nextSection('countdown')">
+                Teruskan →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         COUNTDOWN
+    ========================== -->
+
+    <section id="countdown" class="screen">
+
+        <div class="section-content">
+
+            <p class="small-title">
+                A LITTLE COUNTDOWN
+            </p>
+
+            <h1>
+                Your Special Day
+            </h1>
+
+            <p class="description">
+                Walaupun masa bergerak laju,
+                hari ni tetap akan jadi salah satu
+                hari yang special untuk dikenang.
+            </p>
+
+            <div class="countdown-box">
+
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>HARI</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>JAM</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>MINIT</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>SAAT</small>
+                </div>
+
+            </div>
+
+            <button class="main-btn" onclick="nextSection('message')">
+                Ada lagi ↓
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MESSAGE
+    ========================== -->
+
+    <section id="message" class="screen">
+
+        <div class="section-content">
+
+            <p class="small-title">
+                A MESSAGE FOR YOU
+            </p>
+
+            <h1>
+                Untuk Kau 🤍
+            </h1>
+
+            <div class="message-card">
+
+                <p>
+                    Happy Birthday! 🎂
+                </p>
+
+                <p>
+                    Happy birthday acap aku harap harini jadi hari yg bahagia untuk kau sorry for the late wish
+                    and aku tktau nak bagi kau apa so aku buat benda ni
+                </p>
+
+                <p>
+                    Banyak benda mungkin dah berubah sepanjang
+                    kita kenal, tapi aku tetap hargai semua
+                    moment yang pernah kita lalui bersama.
+                </p>
+
+                <p>
+                    Aku harap tahun baru dalam hidup kau ni
+                    akan dipenuhi dengan benda-benda yang baik.
+                    Semoga apa yang kau impikan perlahan-lahan
+                    jadi kenyataan and aku harap kau berjaya dalam spm kau
+                </p>
+
+                <p>
+                    Kalau ada masa susah nanti, jangan lupa
+                    yang kau dah berjaya lalui banyak benda
+                    sebelum ni.
+                </p>
+
+                <p class="highlight">
+                    Keep going. Keep smiling. Keep being you. ✨
+                </p>
+
+            </div>
+
+            <button class="main-btn" onclick="nextSection('memories')">
+                Memory Time 📸
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MEMORY
+    ========================== -->
+
+    <section id="memories" class="screen">
+
+        <div class="section-content wide">
+
+            <p class="small-title">
+                SOME MEMORIES
+            </p>
+
+            <h1>
+                Moments To Remember 📸
+            </h1>
+
+            <p class="description">
+                Beberapa moment yang patut disimpan
+                dan dikenang.
+            </p>
+
+
+            <div class="gallery">
+
+                <!-- GAMBAR 1 -->
+
+                <div class="photo-card">
+
+                    <img src="gambar.jpg2" alt="Memory 1">
+
+                    <div class="photo-caption">
+
+                        <h3>
+                            Memory #1
+                        </h3>
+
+                        <p>
+                            One of the moments to remember.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GAMBAR 2 -->
+
+                <div class="photo-card">
+
+                    <img src="gambar.jpg2" alt="Memory 2">
+
+                    <div class="photo-caption">
+
+                        <h3>
+                            Memory #2
+                        </h3>
+
+                        <p>
+                            A moment worth keeping.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GAMBAR 3 -->
+
+                <div class="photo-card">
+
+                    <img src="gambar.jpg3" alt="Memory 3">
+
+                    <div class="photo-caption">
+
+                        <h3>
+                            Memory #3
+                        </h3>
+
+                        <p>
+                            Good times, good memories.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button class="main-btn" onclick="nextSection('appreciation')">
+                Next →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         APPRECIATION
+    ========================== -->
+
+    <section id="appreciation" class="screen">
+
+        <div class="section-content wide">
+
+            <p class="small-title">
+                THINGS I APPRECIATE
+            </p>
+
+            <h1>
+                About You ✨
+            </h1>
+
+            <div class="appreciation-grid">
+
+                <div class="appreciation-card">
+
+                    <div class="icon">
+                        ☀️
+                    </div>
+
+                    <h3>
+                        Your Energy
+                    </h3>
+
+                    <p>
+
+                        kau buat suasana jadi lebih
+                        happy walaupun benda kecil.
+                    </p>
+
+                </div>
+
+
+                <div class="appreciation-card">
+
+                    <div class="icon">
+                        🤍
+                    </div>
+
+                    <h3>
+                        Your Heart
+                    </h3>
+
+                    <p>
+                        Kebaikan yang kau tunjuk dekat orang
+                        mungkin nampak simple, tapi bermakna.
+                    </p>
+
+                </div>
+
+
+                <div class="appreciation-card">
+
+                    <div class="icon">
+                        🌙
+                    </div>
+
+                    <h3>
+                        Your Presence
+                    </h3>
+
+                    <p>
+                        Kadang-kadang tak perlu buat apa pun.
+                        Cukup dengan ada pun dah bermakna and lucu.
+                    </p>
+
+                </div>
+
+
+                <div class="appreciation-card">
+
+                    <div class="icon">
+                        ⭐
+                    </div>
+
+                    <h3>
+                        Your Uniqueness
+                    </h3>
+
+                    <p>
+                        Jangan cuba jadi orang lain.
+                        Jadi diri sendiri pun dah cukup.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button class="main-btn" onclick="nextSection('music')">
+                Next 🎵
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MUSIC
+    ========================== -->
+
+    <section id="music" class="screen">
+
+        <div class="section-content">
+
+            <p class="small-title">
+                A SONG FOR YOU
+            </p>
+
+            <h1>
+                Press Play 🎵
+            </h1>
+
+            <div class="music-card">
+
+                <div class="music-icon">
+                    🎧
+                </div>
+
+                <h2>
+                    Your Birthday Song
+                </h2>
+
+                <p>
+                    Let the music play while you continue
+                    through the memories.
+                </p>
+
+                <audio id="birthdayMusic" loop>
+
+                    <source src="song.mp3" type="audio/mpeg">
+
+                </audio>
+
+                <button class="music-btn" onclick="toggleMusic()">
+                    ▶ Play Music
+                </button>
+
+            </div>
+
+
+            <button class="main-btn" onclick="nextSection('wishes')">
+                Continue →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WISHES
+    ========================== -->
+
+    <section id="wishes" class="screen">
+
+        <div class="section-content">
+
+            <p class="small-title">
+                BIRTHDAY WISHES
+            </p>
+
+            <h1>
+                I Wish You... 🌟
+            </h1>
+
+            <div class="wish-card">
+
+                <div id="wishIcon" class="wish-icon">
+                    🌟
+                </div>
+
+                <h2 id="wishTitle">
+                    Happiness
+                </h2>
+
+                <p id="wishText">
+                    Semoga hidup kau dipenuhi dengan
+                    banyak sebab untuk tersenyum.
+                </p>
+
+            </div>
+
+
+            <button class="main-btn" onclick="nextWish()">
+                Another Wish ✨
+            </button>
+
+
+            <button class="secondary-btn" onclick="nextSection('final')">
+                Skip to the Surprise
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+
+    <section id="final" class="screen">
+
+        <div class="final-content">
+
+            <div class="gift">
+                🎁
+            </div>
+
+            <p class="small-title">
+                ONE LAST THING
+            </p>
+
+            <h1>
+                You Made It!
+            </h1>
+
+            <p class="final-message">
+
+                Terima kasih sebab sampai habis.
+
+                <br><br>
+
+                Sekali lagi...
+
+            </p>
+
+            <h2 class="huge-birthday">
+                HAPPY BIRTHDAY! 🎂
+            </h2>
+
+            <p class="final-message">
+
+                Semoga tahun ni jadi lebih baik
+                daripada tahun-tahun sebelumnya.
+
+            </p>
+
+            <button class="main-btn" onclick="celebrate()">
+                🎉 Make It Rain
+            </button>
+
+            <p id="finalText" class="final-text"></p>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```

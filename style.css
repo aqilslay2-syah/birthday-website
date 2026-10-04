@@ -1,0 +1,783 @@
+```css * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08000f;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   SCREEN
+========================= */
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 25px;
+
+    position: relative;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(174, 0, 255, 0.20),
+            transparent 40%),
+
+        radial-gradient(circle at bottom,
+            rgba(255, 0, 140, 0.12),
+            transparent 40%),
+
+        #08000f;
+}
+
+.screen.active {
+    display: flex;
+
+    animation: fadeIn 0.8s ease;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.opening-content,
+.birthday-content,
+.section-content,
+.final-content {
+
+    width: 100%;
+    max-width: 900px;
+
+    text-align: center;
+}
+
+.section-content.wide {
+    max-width: 1150px;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #d889ff;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+h1 {
+
+    font-size:
+        clamp(40px, 7vw, 80px);
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.description {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 40px;
+
+    color: #c9b9d2;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.opening-text {
+
+    color: #c9b9d2;
+
+    line-height: 1.8;
+
+    margin:
+        25px auto 35px;
+
+    font-size: 17px;
+}
+
+.typing {
+
+    min-height: 30px;
+
+    color: #e7c8ff;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.main-btn,
+.secondary-btn,
+.music-btn {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding:
+        15px 28px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.main-btn {
+
+    color: white;
+
+    background:
+        linear-gradient(135deg,
+            #9d2cff,
+            #ff2c9c);
+
+    box-shadow:
+        0 10px 35px rgba(191, 35, 255, 0.25);
+}
+
+.main-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 45px rgba(191, 35, 255, 0.45);
+}
+
+.secondary-btn {
+
+    display: block;
+
+    margin:
+        20px auto 0;
+
+    background: transparent;
+
+    color: #c995ff;
+
+    border:
+        1px solid #6e357f;
+}
+
+.secondary-btn:hover {
+
+    background:
+        rgba(165, 50, 255, 0.1);
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.cake {
+
+    font-size: 100px;
+
+    margin-bottom: 20px;
+
+    animation:
+        float 3s ease-in-out infinite;
+}
+
+.birthday-title {
+
+    font-size:
+        clamp(60px, 12vw, 140px);
+
+    background:
+        linear-gradient(135deg,
+            #ffffff,
+            #d77aff,
+            #ff5bbd);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.name {
+
+    color: #f0d7ff;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-box {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    max-width: 700px;
+
+    margin:
+        40px auto;
+}
+
+.time-box {
+
+    padding: 25px 10px;
+
+    border:
+        1px solid rgba(218, 142, 255, 0.2);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+.time-box span {
+
+    display: block;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #e89aff;
+}
+
+.time-box small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #aa9bae;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-card {
+
+    max-width: 750px;
+
+    margin:
+        30px auto 40px;
+
+    padding: 40px;
+
+    text-align: left;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.025));
+
+    border:
+        1px solid rgba(216, 137, 255, 0.18);
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.25);
+}
+
+.message-card p {
+
+    color: #d4c7da;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.message-card p:first-child {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+.message-card .highlight {
+
+    color: #df8dff;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin:
+        40px 0;
+}
+
+.photo-card {
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid rgba(216, 137, 255, 0.15);
+
+    transition:
+        0.35s;
+}
+
+.photo-card:hover {
+
+    transform:
+        translateY(-8px) scale(1.02);
+
+    border-color:
+        rgba(216, 137, 255, 0.4);
+}
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    background: #170c20;
+}
+
+.photo-caption {
+
+    padding: 18px;
+
+    text-align: left;
+}
+
+.photo-caption h3 {
+
+    margin-bottom: 7px;
+}
+
+.photo-caption p {
+
+    color: #9f91a7;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   APPRECIATION
+========================= */
+
+.appreciation-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin:
+        40px 0;
+}
+
+.appreciation-card {
+
+    padding: 30px;
+
+    text-align: left;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid rgba(216, 137, 255, 0.14);
+
+    transition:
+        0.3s;
+}
+
+.appreciation-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+.icon {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+.appreciation-card h3 {
+
+    margin-bottom: 10px;
+}
+
+.appreciation-card p {
+
+    color: #a99dad;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-card {
+
+    max-width: 500px;
+
+    margin:
+        40px auto;
+
+    padding:
+        45px 30px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(157, 44, 255, 0.12),
+            rgba(255, 44, 156, 0.08));
+
+    border:
+        1px solid rgba(216, 137, 255, 0.2);
+}
+
+.music-icon {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation:
+        float 3s ease-in-out infinite;
+}
+
+.music-card h2 {
+
+    margin-bottom: 15px;
+}
+
+.music-card p {
+
+    color: #a99dad;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.music-btn {
+
+    background: white;
+
+    color: #200b2c;
+}
+
+.music-btn:hover {
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =========================
+   WISHES
+========================= */
+
+.wish-card {
+
+    max-width: 600px;
+
+    margin:
+        40px auto;
+
+    padding:
+        45px 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid rgba(216, 137, 255, 0.18);
+}
+
+.wish-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+}
+
+.wish-card h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.wish-card p {
+
+    color: #b9aabd;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.gift {
+
+    font-size: 100px;
+
+    margin-bottom: 20px;
+
+    animation:
+        float 2.5s ease-in-out infinite;
+}
+
+.huge-birthday {
+
+    font-size:
+        clamp(35px, 7vw, 75px);
+
+    background:
+        linear-gradient(135deg,
+            #ffffff,
+            #e184ff,
+            #ff62b9);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    margin:
+        30px 0;
+}
+
+.final-message {
+
+    color: #c6b7cc;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.final-text {
+
+    margin-top: 25px;
+
+    color: #ed9cff;
+
+    font-weight: bold;
+
+    min-height: 25px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+    }
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+
+    position: fixed;
+
+    width: 10px;
+    height: 10px;
+
+    top: -20px;
+
+    z-index: 9999;
+
+    animation:
+        fall linear forwards;
+}
+
+@keyframes fall {
+
+    to {
+
+        transform:
+            translateY(110vh) rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .screen {
+
+        padding:
+            60px 18px;
+    }
+
+    .countdown-box {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .appreciation-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .photo-card img {
+
+        height: 280px;
+    }
+
+    .message-card {
+
+        padding: 25px;
+    }
+
+    .birthday-title {
+
+        font-size: 65px;
+    }
+}
